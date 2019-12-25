@@ -26,6 +26,7 @@ public class SecondActivity extends AppCompatActivity {
 
         mReply = findViewById(R.id.editText_second);
 
+        // Second Activity'yi baslatan intent i getirir.
         Intent intent = getIntent();
 
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
@@ -46,43 +47,5 @@ public class SecondActivity extends AppCompatActivity {
         setResult(RESULT_OK, replyIntent);
 
         finish();
-    }
-
-
-    // LIFECYCLE METHODS //
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(LOG_TAG, "onStart");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(LOG_TAG, "onPause");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(LOG_TAG, "onRestart");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(LOG_TAG, "onResume");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(LOG_TAG, "onStop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(LOG_TAG, "onDestroy");
     }
 }
